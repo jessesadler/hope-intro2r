@@ -378,7 +378,7 @@ ggplot(data = mpg, aes(x = hwy, y = displ)) +
     geom_smooth()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/mpg-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/mpg-1.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: inverse, center, middle
@@ -963,7 +963,7 @@ See script: 07-ggplot2-scatterplots.R
 ---
 # Making a plot with prices of goods in Holland
 .center[
-&lt;img src="hope-intro2r_files/figure-html/dutch-prices-01-1.png" height="500" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/dutch-prices-01-1.png" height="500" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -980,7 +980,7 @@ ggplot(data = dutch_prices,
   geom_point()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/dutch-prices-02-1.png" height="300" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/dutch-prices-02-1.png" height="300" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Grammar of graphics
@@ -1006,7 +1006,7 @@ ggplot(data = dutch_prices,
 ]
 
 .pull-right[
-![](hope-intro2r_files/figure-html/dutch-prices-03-1.png)
+![](index_files/figure-html/dutch-prices-03-1.png)
 ]
 
 ---
@@ -1017,7 +1017,7 @@ ggplot(data = dutch_prices,
 ggplot(data = dutch_prices)
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-71-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-71-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
 # Layers: aesthetics
@@ -1028,7 +1028,7 @@ ggplot(data = dutch_prices,
 *      aes(x = year, y = guilders))
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-72-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-72-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
 # Layers: geoms
@@ -1039,7 +1039,7 @@ ggplot(data = dutch_prices, aes(x = year, y = guilders)) +
 * geom_point()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-73-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-73-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
 # Layers: multiple geoms
@@ -1051,7 +1051,7 @@ ggplot(data = dutch_prices, aes(x = year, y = guilders)) +
 * geom_line(aes(group = commodity))
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-74-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-74-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
 # Layers: map more aesthetics to variables
@@ -1066,7 +1066,7 @@ ggplot(data = dutch_prices,
   geom_point()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-75-1.png" height="300" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-75-1.png" height="300" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-right[
@@ -1079,7 +1079,7 @@ ggplot(data = dutch_prices,
   geom_point()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-76-1.png" height="300" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-76-1.png" height="300" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -1092,7 +1092,7 @@ ggplot(data = dutch_prices,
 * geom_line()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-77-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-77-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
 # Layers: non-mapped aesthetic changes
@@ -1104,7 +1104,7 @@ ggplot(data = dutch_prices,
 * geom_point(color = "orange", size = 3, alpha = 0.5)
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-78-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-78-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
 # Layers: Facet wrap
@@ -1116,7 +1116,7 @@ ggplot(data = dutch_prices, aes(x = year, y = guilders)) +
 * facet_wrap(~ commodity)
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-79-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-79-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
 class: inverse, center, middle
@@ -1136,7 +1136,7 @@ ggplot(letters, aes(year)) +
   geom_bar()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-81-1.png" height="350" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-81-1.png" height="350" style="display: block; margin: auto;" /&gt;
 
 ---
 # Stat identity
@@ -1156,7 +1156,7 @@ letters %&gt;%
 ]
 
 .pull-right[
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-83-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-83-1.png" height="400" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -1169,7 +1169,7 @@ ggplot(letters,
   geom_bar()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-84-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-84-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
 # Coordinate flip
@@ -1181,7 +1181,7 @@ ggplot(letters, aes(destination)) +
   geom_bar()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-85-1.png" height="350" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-85-1.png" height="350" style="display: block; margin: auto;" /&gt;
 ]
 
 --
@@ -1194,7 +1194,7 @@ ggplot(letters, aes(destination)) +
 * coord_flip()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-86-1.png" height="350" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-86-1.png" height="350" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -1206,7 +1206,7 @@ ggplot(letters, aes(date)) +
   geom_histogram(binwidth = 60)
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-87-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-87-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
 class: inverse, center, middle
@@ -1230,7 +1230,7 @@ ggplot(data = dutch_prices,
        color = "Commodities")
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-89-1.png" height="300" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-89-1.png" height="300" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Themes with `ggplot2`
@@ -1245,7 +1245,7 @@ ggplot(data = dutch_prices,
 * theme_bw()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-90-1.png" height="350" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-90-1.png" height="350" style="display: block; margin: auto;" /&gt;
 
 ---
 class: inverse, center, middle
@@ -1649,7 +1649,7 @@ ggplot(data = grain_prices, aes(x = date, y = price, color = grain)) +
   geom_line()
 ```
 
-&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-115-1.png" height="400" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-115-1.png" height="400" style="display: block; margin: auto;" /&gt;
 
 ---
     </textarea>
