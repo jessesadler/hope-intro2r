@@ -58,7 +58,7 @@ knitr::include_graphics("https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.
 ## The spreadsheet: The first killer app
 
 ```{r echo = FALSE}
-knitr::include_graphics("../images/excel.png")
+knitr::include_graphics("images/excel.png")
 ```
 
 ---
@@ -141,7 +141,7 @@ knitr::include_graphics("../images/excel.png")
 
 .center[
 ```{r echo = FALSE, out.width = "75%"}
-knitr::include_graphics("../images/draw-owl.jpeg")
+knitr::include_graphics("images/draw-owl.jpeg")
 ```
 ]
 
@@ -157,8 +157,8 @@ knitr::include_graphics("https://media.giphy.com/media/nkLB4Gp8H6hFe/giphy.gif")
 ---
 ## But frustration is normal and consequences are small
 
-```{r echo = FALSE}
-knitr::include_graphics("../images/this-is-fine.jpeg")
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("images/this-is-fine.png")
 ```
 
 ---
@@ -184,7 +184,7 @@ knitr::include_graphics("../images/this-is-fine.jpeg")
 
 .center[
 ```{r echo = FALSE, out.width = "25%"}
-knitr::include_graphics("../images/Rlogo.png")
+knitr::include_graphics("images/Rlogo.png")
 ```
 
 ]
@@ -238,7 +238,7 @@ class: inverse, center, middle
 ## R: Archives
 
 ```{r echo = FALSE, out.width = "75%"}
-knitr::include_graphics("../images/archive.jpg")
+knitr::include_graphics("images/archive.jpg")
 ```
 ]
 
@@ -246,7 +246,7 @@ knitr::include_graphics("../images/archive.jpg")
 ## RStudio: Catalogue
 
 ```{r echo = FALSE}
-knitr::include_graphics("../images/dvdm-inventory.png")
+knitr::include_graphics("images/dvdm-inventory.png")
 ```
 ]
 
@@ -261,7 +261,7 @@ knitr::include_graphics("../images/dvdm-inventory.png")
 
 .center[
 ```{r echo = FALSE}
-knitr::include_graphics("../images/RStudio.png")
+knitr::include_graphics("images/RStudio.png")
 ```
 ]
 
@@ -270,7 +270,7 @@ knitr::include_graphics("../images/RStudio.png")
 
 .center[
 ```{r echo = FALSE}
-knitr::include_graphics("../images/RStudio-script.png")
+knitr::include_graphics("images/RStudio-script.png")
 ```
 ]
 
@@ -348,7 +348,7 @@ Could have Shiny app of CRAN downloads on another tab
 ## Hadley Wickham
 
 ```{r echo = FALSE, out.width = "75%"}
-knitr::include_graphics("../images/wickham.jpg")
+knitr::include_graphics("images/wickham.jpg")
 ```
 ]
 
@@ -356,7 +356,7 @@ knitr::include_graphics("../images/wickham.jpg")
 ## The tidyverse
 
 ```{r echo = FALSE}
-knitr::include_graphics("../images/tidyverse.jpeg")
+knitr::include_graphics("images/tidyverse.jpeg")
 ```
 ]
 
@@ -400,7 +400,7 @@ class: inverse, center, middle
 Scripts: text files with .R extension
 
 ```{r echo = FALSE, out.width = "75%"}
-knitr::include_graphics("../images/script.png")
+knitr::include_graphics("images/script.png")
 ```
 ]
 
@@ -425,7 +425,7 @@ Tools > Global Options
 
 .center[
 ```{r echo = FALSE, out.width = "60%"}
-knitr::include_graphics("../images/RStudio-preferences.png")
+knitr::include_graphics("images/RStudio-preferences.png")
 ```
 ]
 
@@ -436,7 +436,7 @@ knitr::include_graphics("../images/RStudio-preferences.png")
 ## RStudio Projects
 
 ```{r echo = FALSE}
-knitr::include_graphics("../images/RStudio-project.png")
+knitr::include_graphics("images/RStudio-project.png")
 ```
 ]
 
@@ -546,7 +546,7 @@ class: inverse, center, middle
 
 # Explore data with `dplyr`
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../images/dplyr.png")
+knitr::include_graphics("images/dplyr.png")
 ```
 
 See script: 04-explore-data.R
@@ -725,7 +725,7 @@ class: inverse, center, middle
 
 # The pipe: %>%
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../images/magrittr.png")
+knitr::include_graphics("images/magrittr.png")
 ```
 
 See script: 05-the-pipe.R
@@ -763,7 +763,7 @@ background-size: cover
 
 .pull-left[
 ```{r echo = FALSE}
-knitr::include_graphics("../images/magrittr.png")
+knitr::include_graphics("images/magrittr.png")
 ```
 ]
 
@@ -812,7 +812,7 @@ class: inverse, center, middle
 
 # Relational data with `dplyr`
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../images/dplyr.png")
+knitr::include_graphics("images/dplyr.png")
 ```
 
 See script: 06-relational-data.R
@@ -825,14 +825,14 @@ See `?left_join()` for details.
 
 **inner join**
 ```{r echo = FALSE}
-knitr::include_graphics("../images/join-inner.png")
+knitr::include_graphics("images/join-inner.png")
 ```
 ]
 
 --
 .pull-right[
 ```{r echo = FALSE, out.width = "75%"}
-knitr::include_graphics("../images/join-outer.png")
+knitr::include_graphics("images/join-outer.png")
 ```
 ]
 
@@ -894,7 +894,7 @@ class: inverse, center, middle
 
 # Visualization with `ggplot2`
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../images/ggplot2.png")
+knitr::include_graphics("images/ggplot2.png")
 ```
 
 See script: 07-ggplot2-scatterplots.R
@@ -1036,7 +1036,7 @@ class: inverse, center, middle
 
 # Visualization with `ggplot2`: Statistical transformations
 ```{r echo = FALSE, out.width = "33%"}
-knitr::include_graphics("../images/ggplot2.png")
+knitr::include_graphics("images/ggplot2.png")
 ```
 
 See script: 08-ggplot2-stats.R
@@ -1118,7 +1118,7 @@ class: inverse, center, middle
 
 # Visualization with `ggplot2`: Labels and themes
 ```{r echo = FALSE, out.width = "33%"}
-knitr::include_graphics("../images/ggplot2.png")
+knitr::include_graphics("images/ggplot2.png")
 ```
 
 See script: 09-ggplot2-labels.R
@@ -1153,7 +1153,7 @@ class: inverse, center, middle
 
 # Visualization with `ggplot2`: Saving plots
 ```{r echo = FALSE, out.width = "33%"}
-knitr::include_graphics("../images/ggplot2.png")
+knitr::include_graphics("images/ggplot2.png")
 ```
 
 See script: 10-ggplot2-save.R
@@ -1184,7 +1184,7 @@ class: inverse, center, middle
 
 # Tidying data with tidyr
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../images/tidyr.png")
+knitr::include_graphics("images/tidyr.png")
 ```
 
 See script: 11-tidying-data.R
@@ -1198,7 +1198,7 @@ See script: 11-tidying-data.R
 3. Each value must have its own cell.
 
 ```{r echo = FALSE}
-knitr::include_graphics("../images/tidy-data.png")
+knitr::include_graphics("images/tidy-data.png")
 ```
 
 [Wickham and Grolemund, R for Data Science](https://r4ds.had.co.nz/tidy-data.html)
@@ -1231,7 +1231,7 @@ barley
 ---
 
 ```{r echo = FALSE, out.height = "50%"}
-knitr::include_graphics("../images/wide2long.png")
+knitr::include_graphics("images/wide2long.png")
 ```
 
 ---
