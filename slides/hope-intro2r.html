@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding for the Humanities</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Jesse Sadler" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Coding for the Humanities
+## An Introduction to R for Digital Humanities
+### Jesse Sadler
+
+---
+
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+&lt;/style&gt;
+
+# Agenda
+
+## 1. Why use code for Digital Humanities
+## 2. Introduction to R
+## 3. Learning to code in R
+
+---
+class: inverse, center, middle
+
+# 1. Why use code for Digital Humanities
+
+---
+class: center, inverse
+
+## The power of code
+
+&lt;img src="https://media.giphy.com/media/BemKqR9RDK4V2/giphy.gif" style="display: block; margin: auto;" /&gt;
+
+---
+class: center, inverse
+
+## How do you harness the power?
+
+&lt;img src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" style="display: block; margin: auto;" /&gt;
+
+---
+## The spreadsheet: The first killer app
+
+&lt;img src="../images/excel.png" width="819" style="display: block; margin: auto;" /&gt;
+
+---
+# Spreadsheets are nice
+
+👍 Nice way to enter and look at data
+
+👍 Programatic logic in cells and creation of visualizations
+
+👍 What you see is what you get (WYSIWYG)
+
+---
+
+# Spreadsheets are nice, but...
+
+👍 Nice way to enter and look at data
+
+👍 Programatic logic in cells and creation of visualizations
+
+👍 What you see is what you get (WYSIWYG)
+
+👎 Mixing of data entry and analysis
+
+👎 Mouse clicks or mistaken drags can lead to errors
+
+👎 No way to track changes: Do you want to save changes?
+
+---
+# Other options
+
+- GUI (Graphical User Interface) applications
+    - Tableau
+    - Gephi
+    - QGIS
+
+--
+
+- Web based
+    - Google maps
+    - Palladio
+
+--
+
+- Programming languages (Command line interface)
+    - Java Script
+    - Python
+    - R
+
+---
+# Programming languages...
+
+👎 Have a steep learning curve
+
+--
+
+👍 Powerful and endlessly customizable 💪💪
+
+--
+
+👍 Transparent: Every step can be clearly documented
+
+--
+
+👍 Transferable: To new data and to other people
+
+--
+
+👍 Reproducible
+
+--
+
+👍 Build open-source communities of shared problems and answers 👯
+
+---
+# How do I get started?
+
+## Find a project
+
+--
+
+.center[
+&lt;img src="../images/draw-owl.jpeg" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# A warning: Writing code is frustrating
+
+.center[
+&lt;img src="https://media.giphy.com/media/nkLB4Gp8H6hFe/giphy.gif" style="display: block; margin: auto;" /&gt;
+]
+
+---
+## But frustration is normal and consequences are small
+
+&lt;img src="../images/this-is-fine.jpeg" width="289" style="display: block; margin: auto;" /&gt;
+
+---
+# Why R
+
+- Open Source: It's free
+
+--
+
+- Built for data analysis
+
+--
+
+- Powerful visualization tools
+
+--
+
+- Popular inside and outside academia
+
+--
+
+- Strong community of teachers, learners, and programmers
+
+.center[
+&lt;img src="../images/Rlogo.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+class: inverse, center, middle
+
+# 2. Introduction to R
+
+---
+# Download and Install R
+
+1. [Go to the R Project for Statistical Computing website](https://www.r-project.org)
+
+2. [Click on the download link](https://cran.r-project.org/mirrors.html)
+
+3. Choose a server from which to download R
+    - [RStudio servers](https://cloud.r-project.org/)
+    - [Michigan Technological University](https://cran.mtu.edu/)
+
+4. Select your operating system
+
+5. Mac
+    - Click on the pkg file of the latest release
+    - Follow installation instructions
+
+6. Windows
+    - Click on Base: Install R for the first time
+    - Click on the download link
+    - Follow installation instructions
+
+---
+# Download and Install RStudio
+
+1. [Go to the RStudio website](https://www.rstudio.com)
+
+2. [Click on the Download RStudio link](https://www.rstudio.com/products/rstudio/download/)
+
+3. [Click on the RStudio Desktop: Open Source License link](https://www.rstudio.com/products/rstudio/download/#download)
+
+4. Select your operating system
+
+5. Follow the installation instructions
+
+6. Open the application and make sure everything works
+
+---
+## What is RStudio and how is it different from R?
+
+.pull-left[
+## R: Archives
+
+&lt;img src="../images/archive.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+## RStudio: Catalogue
+
+&lt;img src="../images/dvdm-inventory.png" width="488" style="display: block; margin: auto;" /&gt;
+]
+
+???
+
+- R is the actual programming language that performs the commands
+- RStudio is an IDE (Integrated development environment) or GUI that helps you write and organize code
+- R is necessary to use RStudio, but R is more complex and confusing without RStudio
+
+---
+# RStudio
+
+.center[
+&lt;img src="../images/RStudio.png" width="819" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# RStudio
+
+.center[
+&lt;img src="../images/RStudio-script.png" width="819" style="display: block; margin: auto;" /&gt;
+]
+
+---
+class: inverse, center, middle
+
+# Let's run some code
+
+---
+# Running code
+
+Run code in the console
+
+
+```r
+5 + 10
+```
+
+```
+[1] 15
+```
+
+--
+Use the assignment operator to create named variables or objects
+
+
+```r
+x &lt;- 3 * 2
+```
+
+---
+# Running code
+
+Functions take in objects, perform some set of operations, and return another object
+
+```r
+function_name(argument1 = value1, argument2 = value2, ...)
+```
+
+--
+Like the sequence function, which creates a vector of numbers
+
+```r
+seq(from = 1, to = 20, length.out = x)
+```
+
+```
+[1]  1.0  4.8  8.6 12.4 16.2 20.0
+```
+
+--
+If you need help, use `?function_name()` and look at the examples
+
+```r
+?seq()
+```
+
+---
+class: inverse, center, middle
+
+# Expanding R and the tidyverse
+
+---
+# Expanding R and the tidyverse
+
+- Base R: Packages that come with R
+
+--
+ 
+- Expand base R with packages
+
+--
+
+- [Comprehensive R Archive Network: CRAN](https://cran.r-project.org)
+
+--
+
+- [The tidyverse](https://tidyverse.org)
+
+???
+
+Could have Shiny app of CRAN downloads on another tab
+
+---
+# What is the tidyverse
+
+.pull-left[
+## Hadley Wickham
+
+&lt;img src="../images/wickham.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+## The tidyverse
+
+&lt;img src="../images/tidyverse.jpeg" width="135" style="display: block; margin: auto;" /&gt;
+]
+
+---
+## Downloading packages
+
+To download packages use `install.packages()`: make sure to include the quotation marks
+
+
+```r
+install.packages("tidyverse")
+```
+
+## Loading packages
+
+To use a package it has to be loaded
+
+
+```r
+library(tidyverse)
+```
+
+---
+# Check that everything works
+
+
+```r
+ggplot(data = mpg, aes(x = hwy, y = displ)) +
+    geom_point() + 
+    geom_smooth()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/mpg-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+# Setting up the enironment for coding in RStudio
+
+---
+# What is real and what is not
+
+.pull-left[
+## Real and reproducible
+
+Scripts: text files with .R extension
+
+&lt;img src="../images/script.png" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+## Temporary
+
+Code typed in the console or objects created from the code
+
+
+```r
+x &lt;- 5
+y &lt;- x + 10
+
+y
+```
+
+```
+[1] 15
+```
+]
+
+---
+
+# Save your scripts, not your environment
+
+Tools &gt; Global Options
+
+.center[
+&lt;img src="../images/RStudio-preferences.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# Organizing your scripts and data
+
+.pull-left[
+## RStudio Projects
+
+&lt;img src="../images/RStudio-project.png" width="339" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right[
+## Organizing projects
+
+
+```r
+project-name
+|--data
+    |--cleaned-data.csv
+|--data-raw
+    |--raw-data.csv
+    |--clean-data.R
+|--plots
+    |--bar-plot.png
+    |--scatter-plot.png
+|--project-name.Rproj
+|--scripts
+    |--exploratory-analysis.R
+    |--create-plots.R
+```
+]
+
+???
+Create a project in a new directory
+Create a script
+
+---
+class: center, middle
+
+# Download tutorial
+
+## https://github.com/jessesadler
+
+---
+class: inverse, center, middle
+
+# 3. Learning to code in R
+
+---
+class: inverse, center, middle
+# Import data with `readr`
+
+See script: 03-loading-data.R
+
+---
+# Import data
+
+**Remember to load the tidyverse**
+
+```r
+library(tidyverse)
+```
+
+Import the raw data with `read_csv()`
+
+```r
+letters &lt;- read_csv("data-raw/dvdm-correspondence-1591.csv")
+```
+
+
+
+---
+# Inspect the data
+
+Letters sent to Daniel van der Meulen from 1578 to 1592.
+
+
+```r
+letters
+```
+
+```
+# A tibble: 424 x 5
+   writer                  source    destination  year     date
+   &lt;chr&gt;                   &lt;chr&gt;     &lt;chr&gt;       &lt;int&gt;    &lt;int&gt;
+ 1 Languet, Hubert         Cologne   Antwerp      1578 15781009
+ 2 Languet, Hubert         Ghent     Antwerp      1578 15781224
+ 3 Banos, Theophile de     Frankfurt Antwerp      1578       NA
+ 4 Oudenforte, R.          Lier      Antwerp      1580 15800402
+ 5 Burmania, Dominiques de Duisburg  Cologne      1580 15801010
+ 6 Albada, Aggaeus de      Cologne   Antwerp      1582 15820318
+ 7 Albada, Aggaeus de      Cologne   Antwerp      1582 15820729
+ 8 Goyvaerts, Hendrick     Frankfurt Antwerp      1582 15820922
+ 9 Burmania, Dominiques de Haarlem   Antwerp      1582 15820923
+10 Albada, Aggaeus de      Cologne   Antwerp      1582 15821028
+# ... with 414 more rows
+```
+
+---
+# Parse the date variable
+
+
+```r
+letters &lt;- read_csv("data-raw/dvdm-correspondence-1591.csv",
+                    col_types = 
+                      cols(date = col_date(format = "%Y%m%d")))
+```
+
+
+
+---
+# Saving the data
+
+The converse of `read_csv()` is `write_csv()`.
+
+Write the data frame to the "data" folder with the date variable parsed correctly.
+
+```r
+write_csv(letters, "data/dvdm-correspondence.csv")
+```
+
+- "data/" places the file in the data folder.
+- "dvdm-correspondence.csv" names the file. Make sure to put the csv extension on the end.
+
+--
+
+**Tip**: Minimize the objects that you save. The code that created the objects is more important.
+
+---
+class: inverse, center, middle
+
+# Explore data with `dplyr`
+&lt;img src="../images/dplyr.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+See script: 04-explore-data.R
+
+---
+# Explore data with `dplyr`
+
+## Six main verbs
+
+- select: pick variables or columns to keep or discard
+
+- arrange: reorder rows by values in columns
+
+- filter: pick observations or rows by their values
+
+- mutate: create new variables from information from existing variables
+
+- summarise: Collapse observations to a summary value such as count, mean, or median
+
+- group: Group the observations in order to make a summary of them
+
+---
+## `select()`
+
+Pick variables or columns to keep or discard
+
+```r
+select(letters, writer, date)
+```
+
+--
+Get rid of variables you do not want to keep
+
+```r
+select(letters, -writer, - date)
+```
+
+--
+Rearrange columns
+
+```r
+select(letters, writer, date, destination, source)
+```
+
+--
+Rename columns within selection: `new_name = old_name`
+
+```r
+select(letters, writer, from = source, to = destination)
+```
+
+--
+To keep all variables but rename one or more use `rename()`
+
+```r
+rename(letters, correspondent = writer)
+```
+
+---
+# `arrange()`
+
+`arrange()` does not change the data. It only alters the presentation of the data.
+
+Arrange rows by values in a variable
+
+```r
+arrange(letters, writer)
+```
+
+--
+Arrange rows by multiple variables
+
+```r
+arrange(letters, source, destination)
+```
+
+--
+Arrange rows in descending order with `desc()`
+
+```r
+arrange(letters, desc(date))
+```
+
+---
+# `filter()`
+
+## Comparison in R: what to keep vs what to discard
+
+- Greater than and less than: `&gt;, &gt;=, &lt;, &lt;=`
+
+- Equal and not equal: `==` and `!=`
+    - *note the two equal signs to show equality*
+
+- And, or, not: `&amp;, |, !`
+
+---
+# `filter()`
+
+Pick letters sent to Antwerp
+
+```r
+filter(letters, destination == "Antwerp")
+```
+
+--
+Why doesn't this work?
+
+```r
+filter(letters, destination == Antwerp)
+```
+
+--
+Pick letters sent during certain years
+
+```r
+filter(letters, year &gt;= 1584 &amp; year &lt;= 1586)
+```
+
+--
+Remove rows that do not have a known source or destination: `NA`
+
+```r
+filter(letters, !is.na(source), !is.na(destination))
+```
+
+---
+# `mutate()`
+
+Create new variables from information from existing variables
+
+```r
+mutate(data, variable_name = function_call)
+```
+
+--
+Create new variable with dates from Julain calendar for letters sent after 1582.
+
+```r
+# New data frame with letters after 1582
+gregorian_letters &lt;- filter(letters, year &gt; 1582)
+```
+
+--
+Subtract 10 days from date column of new data frame
+
+```r
+# New variable with Julian calendar dates
+mutate(gregorian_letters, julian = date - 10)
+```
+
+---
+# `summarise()`
+
+English spelling comes from Hadley Wickham's birthplace of New Zealand 🇳🇿
+
+You can also use `summarize()` if you prefer the zed 😉
+
+--
+`summarise()` has a similar formula to `mutate()`
+
+```r
+mutate(data, variable_name = function_call)
+```
+
+--
+Let's try it with `n()` to count the observations
+
+```r
+summarise(letters, count = n())
+```
+
+```
+# A tibble: 1 x 1
+  count
+  &lt;int&gt;
+1   424
+```
+
+🤷🤷🤷🤷🤷🤷🤷🤷🤷
+
+---
+## `summarise()` with `group_by()`
+Summarise is not very useful without `group_by()`.
+
+--
+
+Group the data frame by a variable and then use `summarise()` and `n()`
+
+```r
+# create grouped data frame
+letters_writer &lt;- group_by(letters, writer)
+```
+
+How many letters were written by each correspondent?
+
+```r
+summarise(letters_writer, count = n())
+```
+
+---
+class: inverse, center, middle
+
+# The pipe: %&gt;%
+&lt;img src="../images/magrittr.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+See script: 05-the-pipe.R
+
+---
+# What if you want to perform multiple operations?
+
+How many letters were sent from each location while Daniel lived in Bremen?
+
+--
+
+```r
+# letters to Bremen
+letters_bremen &lt;- filter(letters, destination == "Bremen")
+
+# group data frame by source
+bremen_grouped &lt;- group_by(letters_bremen, source)
+
+# number of letters per source
+bremen_summarised &lt;- summarise(bremen_grouped, count = n())
+
+# arrange with most at top
+finally_done &lt;- arrange(bremen_summarised, desc(count)) 
+```
+
+---
+
+background-image: url("https://media.giphy.com/media/tw1zMQrM2IhC8/giphy.gif")
+background-size: cover
+
+---
+
+.center[
+# The pipe to the rescue
+]
+
+.pull-left[
+&lt;img src="../images/magrittr.png" width="236" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="https://media.giphy.com/media/D49L3FpxqtQ3u/giphy.gif" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# The pipe: %&gt;%
+
+### Read the pipe as "and then"
+Pipe the output of one function directly into the next one
+
+--
+
+```r
+data %&gt;% 
+  do_this() %&gt;% 
+  do_something_else() %&gt;% 
+  do_one_more_thing()
+```
+
+--
+### Keyboard shortcuts
+
+macOS: Cmd+Shift+m
+
+Windows: Ctrl+Shift+M
+
+---
+## The pipe: %&gt;%
+
+Let's try to find letters sent to Bremen again with the pipe.
+
+
+```r
+letters %&gt;% 
+  filter(destination == "Bremen") %&gt;% # letters to Bremen
+  group_by(source) %&gt;% # group by source
+  summarise(count = n()) %&gt;% # letters per source
+  arrange(desc(count)) # most letters at the top
+```
+
+```
+# A tibble: 28 x 2
+   source    count
+   &lt;chr&gt;     &lt;int&gt;
+ 1 Haarlem      58
+ 2 Antwerp      46
+ 3 Frankfurt    11
+ 4 Venice       11
+ 5 Verona        6
+ 6 Amsterdam     5
+ 7 Dordrecht     5
+ 8 London        5
+ 9 Vicenza       5
+10 Delft         3
+# ... with 18 more rows
+```
+
+---
+class: inverse, center, middle
+
+# Relational data with `dplyr`
+&lt;img src="../images/dplyr.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+See script: 06-relational-data.R
+
+---
+## Relational data: working with multiple data frames
+
+.pull-left[
+See `?left_join()` for details.
+
+**inner join**
+&lt;img src="../images/join-inner.png" width="216" style="display: block; margin: auto;" /&gt;
+]
+
+--
+.pull-right[
+&lt;img src="../images/join-outer.png" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+.bottom[
+Images from [Wickham and Grolemund, R for Data Science](https://r4ds.had.co.nz/relational-data.html)
+]
+
+---
+## Join number of letters per writer with kinship and gender data about correspondents
+
+```r
+left_join(df1, df2, by = "key_variable")
+```
+
+1: Import correspondence data
+
+
+--
+
+```r
+correspondents &lt;- read_csv("data/correspondents.csv")
+```
+
+2: Set up letters data
+
+--
+
+```r
+per_writer &lt;- group_by(letters, writer) %&gt;% summarise(count = n())
+```
+
+
+
+3: Join the two data frames
+
+--
+
+```r
+left_join(per_writer, correspondents, by = "writer")
+```
+
+Could use any of the joins because all the correspondents are in both data frames.
+
+---
+## Join by variables with different names
+
+
+```r
+left_join(df1, df2, by = c("variable1" = "variable2"))
+```
+
+--
+Rename one of the writer variables and join the data frames
+
+```r
+rename(per_writer, schrijver = writer) %&gt;% 
+  left_join(correspondents, by = c("schrijver" = "writer"))
+```
+
+```
+# A tibble: 65 x 4
+   schrijver            count kinship gender
+   &lt;chr&gt;                &lt;int&gt; &lt;chr&gt;   &lt;chr&gt; 
+ 1 Achelen, Aelken van      1 non     male  
+ 2 Albada, Aggaeus de       5 non     male  
+ 3 Anraet, Thomas           1 non     male  
+ 4 Backer, Andre            1 non     male  
+ 5 Banos, Theophile de      4 non     male  
+ 6 Bastingius, Jeremias     1 non     male  
+ 7 Beke, Jan van der        3 df      male  
+ 8 Bellasi, Agostino        7 non     male  
+ 9 Berrewijns, Hans         1 df      male  
+10 Bongars, Jacques         7 non     male  
+# ... with 55 more rows
+```
+
+---
+class: inverse, center, middle
+
+# Visualization with `ggplot2`
+&lt;img src="../images/ggplot2.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+See script: 07-ggplot2-scatterplots.R
+
+---
+# Making a plot with prices of goods in Holland
+.center[
+&lt;img src="hope-intro2r_files/figure-html/dutch-prices-01-1.png" height="500" style="display: block; margin: auto;" /&gt;
+]
+
+---
+class: inverse
+
+# Let's look at the code
+
+
+```r
+ggplot(data = dutch_prices,
+       aes(x = year,
+           y = guilders,
+           color = commodity)) +
+  geom_point()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/dutch-prices-02-1.png" height="300" style="display: block; margin: auto;" /&gt;
+
+---
+## Grammar of graphics
+
+- Data
+- Geometric objects (geoms) that provide the type of objects drawn
+- Aesthetic mapping of the data such as location, size, or color
+- Scales of the plot axes
+- Statistical transformation
+- Coordinates
+
+--
+
+.pull-left[
+
+```r
+ggplot(data = dutch_prices,
+       aes(x = year,
+           y = guilders,
+           color = commodity)) +
+  geom_point()
+```
+]
+
+.pull-right[
+![](hope-intro2r_files/figure-html/dutch-prices-03-1.png)
+]
+
+---
+# Layers: Data
+
+
+```r
+ggplot(data = dutch_prices)
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-71-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+# Layers: aesthetics
+
+
+```r
+ggplot(data = dutch_prices,
+*      aes(x = year, y = guilders))
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-72-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+# Layers: geoms
+
+
+```r
+ggplot(data = dutch_prices, aes(x = year, y = guilders)) + 
+* geom_point()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-73-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+# Layers: multiple geoms
+
+
+```r
+ggplot(data = dutch_prices, aes(x = year, y = guilders)) + 
+* geom_point() +
+* geom_line(aes(group = commodity))
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-74-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+# Layers: map more aesthetics to variables
+
+.pull-left[
+
+```r
+ggplot(data = dutch_prices,
+       aes(x = year,
+           y = guilders,
+*          color = commodity)) +
+  geom_point()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-75-1.png" height="300" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+```r
+ggplot(data = dutch_prices,
+       aes(x = year,
+           y = guilders,
+*          shape = commodity)) +
+  geom_point()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-76-1.png" height="300" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# Layers: change geoms
+
+
+```r
+ggplot(data = dutch_prices,
+       aes(x = year, y = guilders, color = commodity)) + 
+* geom_line()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-77-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+# Layers: non-mapped aesthetic changes
+
+
+```r
+ggplot(data = dutch_prices,
+       aes(x = year, y = guilders)) + 
+* geom_point(color = "orange", size = 3, alpha = 0.5)
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-78-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+# Layers: Facet wrap
+
+
+```r
+ggplot(data = dutch_prices, aes(x = year, y = guilders)) + 
+  geom_point() + 
+* facet_wrap(~ commodity)
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-79-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+# Visualization with `ggplot2`: Statistical transformations
+&lt;img src="../images/ggplot2.png" width="33%" style="display: block; margin: auto;" /&gt;
+
+See script: 08-ggplot2-stats.R
+
+---
+# Bar plots: statistical transformations
+
+Why does this work?
+
+```r
+ggplot(letters, aes(year)) + 
+  geom_bar()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-81-1.png" height="350" style="display: block; margin: auto;" /&gt;
+
+---
+# Stat identity
+
+.pull-left[
+
+```r
+letters %&gt;% 
+  group_by(year) %&gt;% 
+  summarise(count = n()) %&gt;% 
+  ggplot(aes(x = year,
+             y = count)) +
+*   geom_bar(stat = "identity")
+```
+
+*Notice the use of the pipe (`%&gt;%`) into `ggplot()`.*
+]
+
+.pull-right[
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-83-1.png" height="400" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# Add another variable with fill
+
+
+```r
+ggplot(letters,
+*      aes(year, fill = destination)) +
+  geom_bar()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-84-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+# Coordinate flip
+
+.pull-left[
+
+```r
+ggplot(letters, aes(destination)) + 
+  geom_bar()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-85-1.png" height="350" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right[
+
+```r
+ggplot(letters, aes(destination)) + 
+  geom_bar() +
+* coord_flip()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-86-1.png" height="350" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# Histogram with date variable
+
+
+```r
+ggplot(letters, aes(date)) + 
+  geom_histogram(binwidth = 60)
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-87-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+# Visualization with `ggplot2`: Labels and themes
+&lt;img src="../images/ggplot2.png" width="33%" style="display: block; margin: auto;" /&gt;
+
+See script: 09-ggplot2-labels.R
+
+---
+## Labels with `ggplot2`
+
+
+```r
+ggplot(data = dutch_prices,
+       aes(x = year, y = guilders, color = commodity)) +
+  geom_point() + 
+  labs(title = "Prices of Goods in Holland",
+       x = "Date",
+       y = "Price in Guilders",
+       color = "Commodities")
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-89-1.png" height="300" style="display: block; margin: auto;" /&gt;
+
+---
+## Themes with `ggplot2`
+
+See `?theme()` for more ways to tweak themes.
+
+
+```r
+ggplot(data = dutch_prices,
+       aes(x = year, y = guilders, color = commodity)) +
+  geom_point() +
+* theme_bw()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-90-1.png" height="350" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+# Visualization with `ggplot2`: Saving plots
+&lt;img src="../images/ggplot2.png" width="33%" style="display: block; margin: auto;" /&gt;
+
+See script: 10-ggplot2-save.R
+
+---
+# Saving a plot with `ggsave()`
+
+
+```r
+ggplot(data = dutch_prices,
+       aes(x = year, y = guilders, color = commodity)) +
+  geom_point() + 
+  labs(title = "Prices of Goods in Holland",
+       x = "Date",
+       y = "Price in Guilders",
+       color = "Commodities")
+```
+
+To save the last plot use `ggsave()`
+
+
+```r
+ggsave("plots/my-first-plot.png")
+```
+
+See `?ggsave()` for options on changing width and height of plot.
+
+---
+class: inverse, center, middle
+
+# Tidying data with tidyr
+&lt;img src="../images/tidyr.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+See script: 11-tidying-data.R
+
+---
+
+# Tidy data
+
+1. Each variable must have its own column.
+2. Each observation must have its own row.
+3. Each value must have its own cell.
+
+&lt;img src="../images/tidy-data.png" width="614" style="display: block; margin: auto;" /&gt;
+
+[Wickham and Grolemund, R for Data Science](https://r4ds.had.co.nz/tidy-data.html)
+
+---
+# What is problematic about this data?
+
+
+```r
+read_csv("/data-raw/barley.csv")
+```
+
+
+```
+# A tibble: 150 x 13
+    Year September October November December January February March April
+   &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;
+ 1  1549 1.25      1.38    1.5      1.31     1.44    1.4      1.38  1.38 
+ 2  1550 1.38      1.63    1.63     1.88     1.9     1.81     1.85  2    
+ 3  1551 1.56      1.69    1.56     1.63     1.75    1.75     1.75  1.75 
+ 4  1552 1.75      2.31    2.25     2.5      2.75    3        3.25  3    
+ 5  1553 1.38      1.69    1.63     1.5      1.63    1.63     1.63  1.63 
+ 6  1554 1.63      1.63    1.81     1.88     1.75    1.75     1.75  1.56 
+ 7  1555 1.5       1.5     1.63     1.5      1.5     1.38     1.63  1.5  
+ 8  1556 1.88      1.75    1.75     2.13     2.13    -        -     -    
+ 9  1557 -         -       -        -        -       -        -     -    
+10  1558 1.38      1.5     1.5      1.38     1.38    1.25     1.13  1    
+# ... with 140 more rows, and 4 more variables: May &lt;chr&gt;, June &lt;chr&gt;,
+#   July &lt;chr&gt;, August &lt;chr&gt;
+```
+
+---
+# Dealing with `NA`
+
+### What character is being used instead of `NA`?
+
+
+```r
+read_csv("data-raw/barley.csv", na = "-")
+```
+
+
+```
+# A tibble: 150 x 13
+    Year September October November December January February March April
+   &lt;int&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1  1549      1.25    1.38     1.5      1.31    1.44     1.4   1.38  1.38
+ 2  1550      1.38    1.63     1.63     1.88    1.9      1.81  1.85  2   
+ 3  1551      1.56    1.69     1.56     1.63    1.75     1.75  1.75  1.75
+ 4  1552      1.75    2.31     2.25     2.5     2.75     3     3.25  3   
+ 5  1553      1.38    1.69     1.63     1.5     1.63     1.63  1.63  1.63
+ 6  1554      1.63    1.63     1.81     1.88    1.75     1.75  1.75  1.56
+ 7  1555      1.5     1.5      1.63     1.5     1.5      1.38  1.63  1.5 
+ 8  1556      1.88    1.75     1.75     2.13    2.13    NA    NA    NA   
+ 9  1557     NA      NA       NA       NA      NA       NA    NA    NA   
+10  1558      1.38    1.5      1.5      1.38    1.38     1.25  1.13  1   
+# ... with 140 more rows, and 4 more variables: May &lt;dbl&gt;, June &lt;dbl&gt;,
+#   July &lt;dbl&gt;, August &lt;dbl&gt;
+```
+
+---
+
+&lt;img src="../images/wide2long.png" width="749" height="50%" style="display: block; margin: auto;" /&gt;
+
+---
+# Gather a data frame
+
+
+```r
+gather(data, key = "key", value = "value", variables_to_gather)
+```
+
+**key:** the name for the variable whose values are currently variable names.
+
+**value:** the name of the variable whose values are contained within the columns that are to be gathered.
+
+---
+# Gather barley data frame
+
+
+
+.pull-left[
+
+```r
+gather(barley,
+       key = month,
+       value = price,
+       -Year)
+```
+
+```
+# A tibble: 1,800 x 3
+    Year month     price
+   &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt;
+ 1  1549 September  1.25
+ 2  1550 September  1.38
+ 3  1551 September  1.56
+ 4  1552 September  1.75
+ 5  1553 September  1.38
+ 6  1554 September  1.63
+ 7  1555 September  1.5 
+ 8  1556 September  1.88
+ 9  1557 September NA   
+10  1558 September  1.38
+# ... with 1,790 more rows
+```
+]
+
+--
+
+.pull-right[
+
+```r
+gather(barley,
+       key = month,
+       value = price,
+       September:August)
+```
+
+```
+# A tibble: 1,800 x 3
+    Year month     price
+   &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt;
+ 1  1549 September  1.25
+ 2  1550 September  1.38
+ 3  1551 September  1.56
+ 4  1552 September  1.75
+ 5  1553 September  1.38
+ 6  1554 September  1.63
+ 7  1555 September  1.5 
+ 8  1556 September  1.88
+ 9  1557 September NA   
+10  1558 September  1.38
+# ... with 1,790 more rows
+```
+]
+
+---
+# Now what do we need to do?
+
+--
+
+1. Create a full date with day, month, and year
+
+--
+
+2. Unite the day, month, and year, data into a single variable
+
+--
+
+3. Make the variable a date class
+
+--
+
+4. Label the type of grain
+
+--
+
+To help with number 3, we can use the **lubridate** package.
+
+
+```r
+install.packages("lubridate")
+```
+
+
+
+---
+## 1. Create a full date with day, month, and year
+
+--
+
+
+```r
+barley_long %&gt;% 
+* mutate(day = 1)
+```
+
+```
+# A tibble: 1,800 x 4
+    Year month     price   day
+   &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1  1549 September  1.25     1
+ 2  1550 September  1.38     1
+ 3  1551 September  1.56     1
+ 4  1552 September  1.75     1
+ 5  1553 September  1.38     1
+ 6  1554 September  1.63     1
+ 7  1555 September  1.5      1
+ 8  1556 September  1.88     1
+ 9  1557 September NA        1
+10  1558 September  1.38     1
+# ... with 1,790 more rows
+```
+
+---
+## 2. Unite the day, month, and year, data into a single variable
+
+--
+
+
+```r
+barley_long %&gt;% 
+  mutate(day = 1) %&gt;% 
+* unite(col = date, "Year", "month", "day", sep = " ")
+```
+
+```
+# A tibble: 1,800 x 2
+   date             price
+   &lt;chr&gt;            &lt;dbl&gt;
+ 1 1549 September 1  1.25
+ 2 1550 September 1  1.38
+ 3 1551 September 1  1.56
+ 4 1552 September 1  1.75
+ 5 1553 September 1  1.38
+ 6 1554 September 1  1.63
+ 7 1555 September 1  1.5 
+ 8 1556 September 1  1.88
+ 9 1557 September 1 NA   
+10 1558 September 1  1.38
+# ... with 1,790 more rows
+```
+
+---
+## 3. Make the variable a date class with lubridate
+
+--
+
+
+```r
+barley_long %&gt;% 
+  mutate(day = 1) %&gt;% 
+  unite(col = date, "Year", "month", "day", sep = " ") %&gt;% 
+* mutate(date = ymd(date))
+```
+
+```
+# A tibble: 1,800 x 2
+   date       price
+   &lt;date&gt;     &lt;dbl&gt;
+ 1 1549-09-01  1.25
+ 2 1550-09-01  1.38
+ 3 1551-09-01  1.56
+ 4 1552-09-01  1.75
+ 5 1553-09-01  1.38
+ 6 1554-09-01  1.63
+ 7 1555-09-01  1.5 
+ 8 1556-09-01  1.88
+ 9 1557-09-01 NA   
+10 1558-09-01  1.38
+# ... with 1,790 more rows
+```
+
+---
+## 4. Label the type of grain
+
+--
+
+
+
+
+
+```r
+barley_long %&gt;% 
+  mutate(day = 1) %&gt;% 
+  unite(col = date, "Year", "month", "day", sep = " ") %&gt;% 
+  mutate(date = ymd(date)) %&gt;% 
+* mutate(grain = "barley")
+```
+
+```
+# A tibble: 1,800 x 3
+   date       price grain 
+   &lt;date&gt;     &lt;dbl&gt; &lt;chr&gt; 
+ 1 1549-09-01  1.25 barley
+ 2 1550-09-01  1.38 barley
+ 3 1551-09-01  1.56 barley
+ 4 1552-09-01  1.75 barley
+ 5 1553-09-01  1.38 barley
+ 6 1554-09-01  1.63 barley
+ 7 1555-09-01  1.5  barley
+ 8 1556-09-01  1.88 barley
+ 9 1557-09-01 NA    barley
+10 1558-09-01  1.38 barley
+# ... with 1,790 more rows
+```
+
+---
+# Repeat with oats and wheat data
+
+Repeat steps with "oats.csv" and "wheat.csv" to create `barley_tidied`, `oats_tidied`, and `wheat_tidied`.
+
+Make sure to label the grain the correct type of grain.
+
+--
+
+
+```r
+oats_tidied &lt;- read_csv("../data-raw/oats.csv", na = "-") %&gt;% 
+  gather(key = month, value = price, -Year) %&gt;% 
+  mutate(day = 1) %&gt;% 
+  unite(col = date, "Year", "month", "day", sep = " ") %&gt;% 
+  mutate(date = ymd(date),
+         grain = "oats")
+
+wheat_tidied &lt;- read_csv("../data-raw/wheat.csv", na = "-") %&gt;% 
+  gather(key = month, value = price, -Year) %&gt;% 
+  mutate(day = 1) %&gt;% 
+  unite(col = date, "Year", "month", "day", sep = " ") %&gt;% 
+  mutate(date = ymd(date),
+         grain = "wheat")
+```
+
+---
+# Bind barley, oats, and wheat data
+
+Bind the rows of the three data frames with `bind_rows()` to create a `grain_prices` data frame.
+
+bind_rows(barley_tidied, oats_tidied, wheat_tidied)
+
+
+```r
+bind_rows(barley_tidied, oats_tidied, wheat_tidied)
+```
+
+```
+# A tibble: 5,400 x 3
+   date       price grain 
+   &lt;date&gt;     &lt;dbl&gt; &lt;chr&gt; 
+ 1 1549-09-01  1.25 barley
+ 2 1550-09-01  1.38 barley
+ 3 1551-09-01  1.56 barley
+ 4 1552-09-01  1.75 barley
+ 5 1553-09-01  1.38 barley
+ 6 1554-09-01  1.63 barley
+ 7 1555-09-01  1.5  barley
+ 8 1556-09-01  1.88 barley
+ 9 1557-09-01 NA    barley
+10 1558-09-01  1.38 barley
+# ... with 5,390 more rows
+```
+
+
+
+
+---
+# Visualize the data
+
+
+```r
+ggplot(data = grain_prices, aes(x = date, y = price, color = grain)) + 
+  geom_line()
+```
+
+&lt;img src="hope-intro2r_files/figure-html/unnamed-chunk-115-1.png" height="400" style="display: block; margin: auto;" /&gt;
+
+---
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
