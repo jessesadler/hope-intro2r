@@ -1408,4 +1408,39 @@ ggplot(data = grain_prices, aes(x = date, y = price, color = grain)) +
 ```
 
 ---
+# Workflow
 
+1. Find or create data that can go into a spreadsheet.
+
+--
+
+2. Create an R Project with RStudio and set up structure of documents.
+
+--
+
+3. Import data and explore the data. Create a script when you get something you want to save.
+
+--
+
+4. Create and save visuals.
+
+---
+# Resources: Tools for the furture
+
+- Genernal
+    - [Garrett Grolemund and Hadley Wickham, R for Data Science](https://r4ds.had.co.nz)
+    - [List of R Manuals](http://colinfay.me/r-manuals/)
+    - [Kieran Healy, Data Visualization for Social Science](http://socviz.co)
+
+- GIS: Maps
+    - [Introduction to GIS with R from my blog](https://jessesadler.com/post/gis-with-r-intro/)
+  - [Lovelace, Nowosad, Muenchow, Geocomputation with R](https://geocompr.robinlovelace.net)
+
+- Network Analysis
+    - [Introduction to Network Analysis with R](https://jessesadler.com/post/network-analysis-with-r/)
+    - [Katya Ognyanova, Static and dynamic network visualization with R](http://kateto.net/network-visualization)
+
+- Text Analysis
+    - [Silge and Robinson, Text Mining with R: A Tidy Approach](https://www.tidytextmining.com)
+
+---
