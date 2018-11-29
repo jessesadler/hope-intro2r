@@ -1,6 +1,6 @@
 ## Script 04: Exploring data ##
 
-# Load packages and dvdm correspondence data
+# Load packages and dvdm correspondence data you just created
 # Use what you know from previous scripts
 
 
@@ -55,7 +55,7 @@ filter(letters, !is.na(source), !is.na(destination))
 
 # mutate ------------------------------------------------------------------
 
-# Create new variable with dates from Julain calendar for letters sent after 1582.
+# Create new variable with dates from Julian calendar for letters sent after 1582.
 
 # New data frame with letters after 1582
 gregorian_letters <- filter(letters, year > 1582)
@@ -83,5 +83,5 @@ letters_writer <- group_by(letters, writer)
 # How many letters were written by each correspondent?
 summarise(letters_writer, count = n())
 
-# Can you write functions to see how many letters were sent along each route?
-# From each source to each destination?
+# Can you write commands to see how many letters were sent along each route,
+# that is, from each source to each destination?

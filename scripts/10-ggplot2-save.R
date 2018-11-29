@@ -10,6 +10,7 @@
 ggsave("plots/my-first-plot.png")
 
 # This places the file in a plots folder and names it my-first-plot.png
+# If you do not have a plots folder, you may need to create it.
 
 # Create a pdf file of the plot.
 
@@ -17,5 +18,7 @@ ggsave("plots/my-first-plot.png")
 # Change width and height -------------------------------------------------
 
 ggsave("plots/my-first-plot1.png", width = 6, height = 4)
+
+# What happens when you change the size of the saved plot?
 
 # See ?ggave for more options

@@ -28,4 +28,4 @@ ggplot(data = dutch_prices,
 
 # Test out other ggplot2 themes
 
-# For way more information than you will ever want see ?theme()
+# For way more information than you will ever want, see ?theme()

@@ -1,12 +1,15 @@
 ## Script 11: Tidying data with tidyr ##
 
-# 1. Load the tidyverse
-# Install lubridate package and make sure to load it
+# 1. Install lubridate package and make sure to load it
+# 2. Load the tidyverse
 # 3. Load barley data from the data-raw folder and parse the NA values
+
+# The data is from Nicholas Poynder, Monthly Grain Prices at Les Halles, Paris,
+# 1549-1698: http://www.iisg.nl/hpw/poynder-france.php
 
 # Taking untidy data and making it tidy
 
-# 1. gather data -------------------------------------------------------------
+# 1. Gather data -------------------------------------------------------------
 
 barley_long <- gather(barley, key = month, value = price, -Year)
 
@@ -14,7 +17,7 @@ barley_long <- gather(barley, key = month, value = price, -Year)
 gather(barley, key = month, value = price, September:August)
 
 
-# 2. tidy date data -------------------------------------------------------
+# 2. Tidy date data -------------------------------------------------------
 
 barley_long %>% 
   mutate(day = 1) %>% # create a day of the month
@@ -22,7 +25,7 @@ barley_long %>%
   mutate(date = ymd(date)) # change class of variable to date class with lubridate
 
 
-# 3. label the type of grain ----------------------------------------------
+# 3. Label the type of grain ----------------------------------------------
 
 barley_tidied <- barley_long %>% 
   mutate(day = 1) %>%
